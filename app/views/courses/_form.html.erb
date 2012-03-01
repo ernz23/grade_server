@@ -1,0 +1,48 @@
+<%= nested_form_for @course, :html => { :class => 'form-horizontal' } do |f| %>
+  <fieldset>
+    <legend><%= controller.action_name.capitalize %> Course</legend>
+
+    <div class="control-group">
+      <%= f.label :code, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_field :code, :class => 'text_field' %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :desc, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_field :desc, :class => 'text_field' %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :school_year, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_field :school_year, :class => 'text_field' %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :period, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_field :period, :class => 'text_field' %>
+      </div>
+    </div>
+
+	<legend>Set Course Distributions </legend>
+	<p class="control-label"><%= link_to_add_fields "Add Distribution", f, :distributions %></p>
+	<div class="control-group">
+		<%f.fields_for :distributions, do |builder| %>
+			<%= render 'distribution_fields', :f => builder %>
+		<%end%>
+	</div>	
+		
+		
+	
+    <div class="form-actions">
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to 'Cancel', courses_path, :class => 'btn' %>
+    </div>
+  </fieldset>
+<% end %>

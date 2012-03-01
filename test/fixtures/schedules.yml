@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  section: MyString
+  days: MyString
+  time: MyString
+
+two:
+  section: MyString
+  days: MyString
+  time: MyString

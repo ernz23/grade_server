@@ -1,0 +1,12 @@
+
+---
+courses:
+  columns:
+  - id
+  - code
+  - desc
+  - school_year
+  - period
+  - created_at
+  - updated_at
+  records: 

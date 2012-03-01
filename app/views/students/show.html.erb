@@ -1,0 +1,27 @@
+<h1>Student</h1>
+
+<p>
+  <b>Student</b><br>
+  <%= @student.student_id %>
+</p>
+
+<p>
+  <b>Firstname</b><br>
+  <%= @student.firstname %>
+</p>
+
+<p>
+  <b>Lastname</b><br>
+  <%= @student.lastname %>
+</p>
+
+<p>
+  <b>Email</b><br>
+  <%= @student.email %>
+</p>
+
+<div class="form-actions">
+  <%= link_to 'Back', students_path, :class => 'btn'  %>
+  <%= link_to 'Edit', edit_student_path(@student), :class => 'btn' %>
+  <%= link_to 'Delete', student_path(@student), :method => 'delete', :confirm => 'Are you sure?', :class => 'btn btn-danger' %>
+</div>

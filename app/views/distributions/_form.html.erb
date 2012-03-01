@@ -1,0 +1,31 @@
+<%= form_for @distribution, :html => { :class => 'form-horizontal' } do |f| %>
+  <fieldset>
+    <legend><%= controller.action_name.capitalize %> Distribution</legend>
+
+    <div class="control-group">
+      <%= f.label :category, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_field :category, :class => 'text_field' %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :percent, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.number_field :percent, :class => 'number_field' %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :course_id, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.number_field :course_id, :class => 'number_field' %>
+      </div>
+    </div>
+
+    <div class="form-actions">
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to 'Cancel', distributions_path, :class => 'btn' %>
+    </div>
+  </fieldset>
+<% end %>

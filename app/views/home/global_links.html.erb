@@ -1,0 +1,29 @@
+
+	<% if current_user %>
+	<ul class="nav">
+		<li class="active">
+			<a href="<%= root_url%>"> Home </a>
+		</li>
+		<li class="active">
+			<%= link_to "Course Load", courses_path%>
+		</li>
+		<li class="active">
+			<%= link_to "My Students", students_path%>
+		</li>
+		<li class="active">
+			<%= link_to "Distributions", distributions_path%>
+		</li>
+		
+	</ul>
+	<%end%>
+	<div class="pull-right">
+		
+			<% if current_user %>
+			 <span style="color:white;"> Logged in as <%= current_user.email %> <%= link_to "Log Out", logout_path %> 
+			<% else %>
+			 <%= link_to "Sign Up", signup_path %> or
+			 <%= link_to "Log In", login_path %> 
+			<% end %></span>
+		
+	</div>
+

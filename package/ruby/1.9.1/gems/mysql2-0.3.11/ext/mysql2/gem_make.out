@@ -1,0 +1,22 @@
+/Users/newmedia/.rvm/rubies/ruby-1.9.2-p290/bin/ruby extconf.rb --with-mysql-config=/usr/local/mysql/bin/mysql_config
+checking for rb_thread_blocking_region()... yes
+checking for rb_wait_for_single_fd()... no
+*** extconf.rb failed ***
+Could not create Makefile due to some reason, probably lack of
+necessary libraries and/or headers.  Check the mkmf.log file for more
+details.  You may need configuration options.
+
+Provided configuration options:
+	--with-opt-dir
+	--with-opt-include
+	--without-opt-include=${opt-dir}/include
+	--with-opt-lib
+	--without-opt-lib=${opt-dir}/lib
+	--with-make-prog
+	--without-make-prog
+	--srcdir=.
+	--curdir
+	--ruby=/Users/newmedia/.rvm/rubies/ruby-1.9.2-p290/bin/ruby
+	--with-mysql-config
+extconf.rb:33:in ``': No such file or directory - /usr/local/mysql/bin/mysql_config --cflags (Errno::ENOENT)
+	from extconf.rb:33:in `<main>'
